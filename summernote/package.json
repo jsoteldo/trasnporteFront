@@ -1,0 +1,5 @@
+{
+    "name": "summernote",
+    "version": "0.8.20",
+    "proxy":"http://localhost:4000"
+}
