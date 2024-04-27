@@ -15,7 +15,6 @@ import Dashboard from '@pages/Dashboard';
 import Blank from '@pages/Blank';
 import SubMenu from '@pages/SubMenu';
 import Profile from '@pages/profile/Profile';
-import Productos from '@pages/productos/Productos';
 import NewProductos from '@pages/productos/CreateEditProducto';
 
 import PublicRoute from './routes/PublicRoute';
@@ -30,10 +29,7 @@ import CargaMasivaProductos from './pages/productos/CargaMasivaProductos';
 import ListaProductos from './pages/productos/ListaProductos';
 import ListaMarcas from './pages/marcas/ListaMarcas';
 import Marcas from './pages/marcas/Marcas';
-import Compras from './pages/compras/Compras';
-import Elementos from './pages/elementos/Elementos';
 import {Toaster} from 'react-hot-toast';
-import ListaElementos from './pages/elementos/ListaElementos';
 
 declare const FB: any;
 
@@ -99,12 +95,7 @@ const App = () => {
             <Route path="/blank" element={<Blank />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/productos" element={<ListaProductos />} />
-            <Route path="/marcas" element={<ListaMarcas/>} />
-            <Route path="/compras" element={<Compras/>} />
-            <Route path="/elementos" element={<ListaElementos/>} />
-            <Route path="/new" element={<Productos />} />
             <Route path="/newMarcas" element={<Marcas />} />
-            <Route path="/newElementos" element={<Elementos />} />
             <Route path="/cargaMasiva" element={<CargaMasivaProductos />} />
             <Route path="/newProductos" element={<NewProductos />} />
             <Route path="/" element={<Dashboard />} />

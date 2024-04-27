@@ -8,10 +8,6 @@ import store from '@store/store';
 import './utils/i18n';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { ProductosProvider } from './context/ProductosContext';
-import { MarcasProvider } from './context/MarcasContext';
-import { ObjetosProvider } from './context/ObjetosContext';
-import { ComprasProvider } from './context/ComprasContext';
 import { UsuariosProvider } from './context/UsuariosContext';
 
 declare const window: any;
@@ -26,15 +22,7 @@ const container: any = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
     <UsuariosProvider>
-    <ProductosProvider>
-      <MarcasProvider>
-        <ObjetosProvider>
-          <ComprasProvider>
             <App />
-          </ComprasProvider>
-        </ObjetosProvider>
-      </MarcasProvider>
-    </ProductosProvider>
     </UsuariosProvider>
   </Provider>,
   container
