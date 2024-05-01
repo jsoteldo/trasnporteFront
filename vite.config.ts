@@ -9,6 +9,7 @@ export default defineConfig({
   mode: 'development',
   base:'https://jsoteldo.github.io/trasnporteFront',
   plugins: [react(), basicSsl(),svgr()],
+  build: { chunkSizeWarningLimit: 1600, },
   resolve: {
     alias: {
       '@app': path.resolve(__dirname, './src'),
