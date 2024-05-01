@@ -6,6 +6,10 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server:{
+    host:true,
+    port:80
+  },
   mode: 'development',
   base:'https://jsoteldo.github.io/trasnporteFront',
   plugins: [react(), basicSsl(),svgr()],
