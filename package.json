@@ -11,7 +11,7 @@
     "format": "prettier-eslint $PWD/'src/**/*.{js,json}' --write",
     "lint": "eslint src/**/*.js",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +52,7 @@
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "exceljs": "^4.3.0",
+    "express": "^4.19.2",
     "file-saver": "^2.0.5",
     "formik": "^2.2.9",
     "i18next": "22.4.15",
