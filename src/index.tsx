@@ -21,7 +21,8 @@ window.PF = {
 const container: any = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
-    <UsuariosProvider>
+    {/* @ts-ignore */}
+    <UsuariosProvider >
             <App />
     </UsuariosProvider>
   </Provider>,

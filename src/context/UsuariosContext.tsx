@@ -49,7 +49,7 @@ export const UsuariosProvider: React.FC = ({ children }:any) => {
     try {
       const res = await deleteUsuarioRequest(usuario._id,usuario);
       if(res.status === 204){
-        setUsuarios(usuario.filter((m) => m._id !== usuario._id));
+       // setUsuarios(usuario.filter((m:any) => m._id !== usuario._id));
       }
     } catch (error) {
       console.error('Error al Eliminar el Usuario:', error);
@@ -61,7 +61,7 @@ export const UsuariosProvider: React.FC = ({ children }:any) => {
       console.log("Usuario a actualizar: "+usuario);
       const res = await updateUsuarioRequest(usuario._id, usuario);
       if(res.status === 204){
-        setUsuarios(usuario.map((m) => (m._id !== usuario._id ? res.data : m)));
+        //setUsuarios(usuario.map((m) => (m._id !== usuario._id ? res.data : m)));
       }
     } catch (error) {
       console.error('Error al Eliminar el Usuario:', error);
@@ -82,7 +82,7 @@ export const UsuariosProvider: React.FC = ({ children }:any) => {
         } else {
           return rej({ message: 'Credenciales son invalidos!' });
         }
-      } catch (error) {
+      } catch (error:any) {
         if(error?.response.status === 400){
           rej({ message: error?.response.data.msg });
         }else{
@@ -110,7 +110,7 @@ export const UsuariosProvider: React.FC = ({ children }:any) => {
     deleteUsuario,
     getUsuario,
     updateUsuario,
-    loginUsuario
+    loginUsuario,
   };
 
   return (

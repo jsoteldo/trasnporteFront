@@ -7,6 +7,7 @@ import svgr from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
   mode: 'development',
+  base:'https://jsoteldo.github.io/trasnporteFront',
   plugins: [react(), basicSsl(),svgr()],
   resolve: {
     alias: {
